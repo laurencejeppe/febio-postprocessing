@@ -3,11 +3,26 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "febio-postprocessing"
+name = "febio_post"
 version = "0.0.1"
-description = "Post-processing tools for FEBio results"
+dependencies = [
+	"pandas",
+    "numpy",
+    "matplotlib",
+]
+authors = [
+    {name = "Laurence Russell", email = "laurence.russell@soton.ac.uk"}
+]
 requires-python = ">=3.8"
-dependencies = []
+description = "Post-processing tools for FEBio results"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Repository = "https://github.com/laurencejeppe/febio-postprocessing.git"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["src"]
+include = ["febpostpro"]
+
